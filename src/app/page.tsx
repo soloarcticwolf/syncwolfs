@@ -1,6 +1,6 @@
 'use client'
 import BtnPrimary from '@/components/unit/button.unit'
-import CustomInput from '@/components/unit/input.unit'
+import CustomInput from '@/components/unit/custom-input.unit'
 import LogoButton from '@/components/unit/logo-button.unit'
 import { signIn } from 'next-auth/react'
 import Image from 'next/image'
@@ -66,14 +66,14 @@ export default function Home() {
 								image='/globe.svg'
 								title='Email'
 								className=''
-								inputType='email'
+								type='email'
 							/>
 							<CustomInput
 								placeholder='Password'
 								image='/globe.svg'
 								title='Password'
 								className=''
-								inputType='password'
+								type='password'
 							/>
 							<div className='forgotPassword'>
 								<p className='text-sm text-right text-blue-600 cursor-pointer m-2'>
@@ -94,8 +94,8 @@ export default function Home() {
 								image='/globe.svg'
 								title='Phone'
 								className=''
-								inputType='number'
-								charLimit={10}
+								type='number'
+								maxLength={10}
 							/>
 						</div>
 					)}
